@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(223, 63, 63, 0.7);
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff9f43;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.3rem;
+    color: #f1f1f1;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #ff9f43;
+    color: #1e3c72;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff9f43;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid #ff9f43;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f1f1f1;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: transform 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skills ul li:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 159, 67, 0.2);
+}
+
+.projects .project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.projects .project:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 159, 67, 0.2);
+}
+
+.projects .project h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #ff9f43;
+}
+
+.projects .project p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f1f1f1;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+
+.contact a {
+    color: #ff9f43;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #ff6f00;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .skills ul li, .projects .project {
+        padding: 15px;
+    }
+}
+/* Photo Styles */
+header {
+    position: relative; /* Ensure the header is a positioning context */
+}
+
+header img.profile-photo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ff9f43;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header img.profile-photo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+/* Adjust Header Padding for Photo */
+@media (max-width: 768px) {
+    header {
+        padding-top: 100px; /* Add extra padding for the photo on small screens */
+    }
+
+    header img.profile-photo {
+        top: 10px;
+        left: 10px;
+        width: 80px;
+        height: 80px;
+    }
+}

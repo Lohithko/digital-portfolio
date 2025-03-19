@@ -538,13 +538,57 @@ footer {
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    /* Remove position: fixed */
+    padding: 7px 0;
     width: 100%;
     font-size: 1rem;
     backdrop-filter: blur(10px);
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+    /* Remove position: fixed */
 }
 .contact {
-    padding-bottom: 80px; /* Adjust this value as needed */
+    padding-bottom: 100px; /* Adjust this value as needed */
+}
+/* General styles for the resume section */
+.resume {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.resume h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.resume p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Styles for the resume download button */
+.resume-button {
+    display: inline-block;
+    padding: 70px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+}
+
+.resume-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Add a slight lift effect on hover */
+}
+
+.resume-button:active {
+    transform: translateY(0); /* Reset the lift effect when clicked */
+}
+
+/* Styles for the download icon */
+.resume-button i {
+    margin-right: 8px; /* Add space between the icon and text */
 }
